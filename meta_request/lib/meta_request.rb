@@ -6,4 +6,7 @@ module MetaRequest
   autoload :Middlewares, "meta_request/middlewares"
 end
 
-require "meta_request/railtie"
+begin
+  require "meta_request/railtie"
+rescue LoadError
+end
